@@ -7,14 +7,14 @@ import csv
 
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
-# initialliza all of the variables
+# initiallize all of the variables
 total_months = 0
 net_total_profit_losses = 0
 last_month_profit_losses = 0
 average_change = 0
 monthly_changes = []
 greatest_increase = ["", 0]     # month amount
-greatest_decrease = ["", 99999999999999]    # month amount
+greatest_decrease = ["", 1000000000000000000]    # month amount
 
 with open(csvpath, "r") as csvfile:
     csvreader = csv.reader(csvfile) # csv.reader object - read the CSV file line by line.
@@ -22,7 +22,7 @@ with open(csvpath, "r") as csvfile:
     
     for row in csvreader:
         # The total number of months included in the dataset
-        total_months +=1
+        total_months += 1
        
         # The net total amount of "Profit/Losses" over the entire period
        
